@@ -1,6 +1,6 @@
 {
   "name": "enum-define",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Enum For Javascript",
   "main": "cjs/index.js",
   "module": "esm/index.js",

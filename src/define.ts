@@ -51,14 +51,8 @@ class Define {
 
         this.enums = utils.deepFreeze(nextEnumMap as EnumObj)
         this.getKeys().forEach((key: string) => {
-            Object.defineProperty(this, key, {
-                get: function() {
-
-                    return utils.get(this.enums, [key, 'code'], -1)
-                },
-            })
+            Reflect.set(this, key, utils.get(this.enums, [key, 'code'], -1))
         })
-
 
         utils.deepFreeze(this)
     }
